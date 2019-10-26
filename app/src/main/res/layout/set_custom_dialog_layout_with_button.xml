@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
-            android:text="取消"
+            android:text="退出"
             />
 
         <Button
@@ -59,7 +59,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
-            android:text="確定"/>
+            android:text="再開啟一個ALERTDIALOG"/>
     </LinearLayout>
 
 

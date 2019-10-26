@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -135,8 +136,13 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = v.findViewById(R.id.ededed);
         AlertDialog dialog = alertDialog.create();
         dialog.show();
-        btOK.setOnClickListener((v1 -> {setToast(editText.getText().toString());dialog.dismiss();}));
-        btC.setOnClickListener((v1 -> {dialog.dismiss();}));
+        btOK.setOnClickListener((v1 -> {
+            AlertDialog.Builder twoDialog = new AlertDialog.Builder(MainActivity.this);
+            twoDialog.setTitle("這是疊上去的AlertDialog");
+            twoDialog.setPositiveButton("瞭解",((dialog1, which) -> {}));
+            twoDialog.show();
+            }));
+        btC.setOnClickListener((v1 -> {setToast(editText.getText().toString());dialog.dismiss();}));
     }
 
 
